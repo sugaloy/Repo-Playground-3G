@@ -3,3 +3,6 @@ iyo" rektor
 
 import scikit
 import matplotlib
+
+
+print("Halo)
