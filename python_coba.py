@@ -1,1 +1,2 @@
 YANG BIKIN INI ANAKNYA REKTOR
+iyo" rektor
