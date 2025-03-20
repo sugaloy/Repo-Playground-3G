@@ -39,6 +39,6 @@ def plot_icosahedron(vertices, faces):
     plt.show()
 
 if __name__ == "__main__":
-    edge_length = float(input("Masukkan panjang sisi Icosahedron: "))
+    edge_length = float(input("Njaluk panjang sisi piro bos ? "))
     vertices, faces = generate_icosahedron_vertices(edge_length)
     plot_icosahedron(vertices, faces)
