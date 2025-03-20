@@ -2,3 +2,5 @@
 Repository untuk playground coba coba
 
 Coba diisi apa saja, yang penting jangan memasukkan identitas pribadi di sini karena ini public
+
+halooooo " info jualan sate musang "
