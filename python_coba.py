@@ -23,6 +23,21 @@ def generate_icosahedron_vertices(edge_length):
     
     return vertices, faces
 
+def calculate_icosahedron_volume(edge_length):
+    # Langkah-langkah perhitungan
+    phi = (1 + np.sqrt(5)) / 2  # Rasio Emas
+    a = edge_length / 2
+    volume = (5 / 12) * (3 + np.sqrt(5)) * (edge_length ** 3)
+    
+    print("Langkah-langkah perhitungan volume icosahedron:")
+    print(f"1. Panjang sisi (a) = {edge_length}")
+    print(f"2. Rasio Emas (phi) = {phi}")
+    print(f"3. Volume = (5/12) * (3 + sqrt(5)) * (a^3)")
+    print(f"4. Volume = (5/12) * (3 + {np.sqrt(5)}) * ({edge_length}^3)")
+    print(f"5. Volume = {volume:.2f}")
+    
+    return volume
+
 def plot_icosahedron(vertices, faces):
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
@@ -40,6 +55,7 @@ def plot_icosahedron(vertices, faces):
 
 if __name__ == "__main__":
     edge_length = float(input("Njaluk panjang sisi piro bos ? ")) 
+    volume = calculate_icosahedron_volume(edge_length)
     vertices, faces = generate_icosahedron_vertices(edge_length)
     plot_icosahedron(vertices, faces)
 
