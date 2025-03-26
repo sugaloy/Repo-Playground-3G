@@ -42,4 +42,14 @@ if __name__ == "__main__":
     edge_length = float(input("Njaluk panjang sisi piro bos ? ")) =float(input("Njaluk panjang sisi piro bos ? "))
     vertices, faces = generate_icosahedron_vertices(edge_length)
     plot_icosahedron(vertices, faces)
+
+#Menampilkan informasi tentang Icosahedron sebelum input panjang sisi.S
+def display_icosahedron_info():
+    print("Icosahedron adalah bangun ruang tiga dimensi yang memiliki:")
+    print("- 20 sisi berbentuk segitiga sama sisi")
+    print("- 12 titik (vertices)")
+    print("- 30 rusuk (edges)")
+    print("- Simetri yang tinggi dan merupakan bagian dari bangun Platonik")
+    print("Icosahedron sering digunakan dalam geometri, grafik komputer, dan model struktur molekul.")
+
     
