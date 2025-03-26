@@ -1,4 +1,5 @@
-#tugas code isocahedron formula dengan input angka manual
+#TUGAS MENYUSUN BERSAMA CODE MENGHITUNG VOLUME ISOCAHEDRON DENGAN INPUT VARIABEL a
+#a = RUSUK SEBUAH BANGUN RUANG ISOCAHEDRON
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
@@ -29,7 +30,7 @@ def calculate_icosahedron_volume(edge_length):
     volume = (5 / 12) * (3 + np.sqrt(5)) * (edge_length ** 3)
     
     print("Langkah-langkah perhitungan volume icosahedron:")
-    print(f"1. Panjang sisi (a) = {edge_length}")
+    print(f"1. Panjang Rusuk (a) = {edge_length}")
     print(f"2. Rasio Emas (phi) = {phi}")
     print(f"3. Volume = (5/12) * (3 + sqrt(5)) * (a^3)")
     print(f"4. Volume = (5/12) * (3 + {np.sqrt(5)}) * ({edge_length}^3)")
@@ -52,7 +53,7 @@ def plot_icosahedron(vertices, faces):
     
     plt.show()
 
-#Menampilkan informasi tentang Icosahedron sebelum input panjang sisi = a
+#Menampilkan informasi tentang Icosahedron sebelum input panjang rusuk = a
 def display_icosahedron_info():
     print("Icosahedron adalah bangun ruang tiga dimensi yang memiliki:")
     print("- 20 sisi berbentuk segitiga sama sisi")
@@ -63,7 +64,7 @@ def display_icosahedron_info():
 
 if __name__ == "__main__":
     display_icosahedron_info()
-    edge_length = float(input("Njaluk panjang sisi piro bos ? ")) 
+    edge_length = float(input("Masukkan Panjang Rusuk = a : ")) 
     volume = calculate_icosahedron_volume(edge_length)
     vertices, faces = generate_icosahedron_vertices(edge_length)
     plot_icosahedron(vertices, faces)
