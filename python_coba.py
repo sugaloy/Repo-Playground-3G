@@ -24,8 +24,7 @@ def generate_icosahedron_vertices(edge_length):
     return vertices, faces
 
 def calculate_icosahedron_volume(edge_length):
-    # Langkah-langkah perhitungan
-    phi = (1 + np.sqrt(5)) / 2  # Rasio Emas
+    phi = (1 + np.sqrt(5)) / 2  
     a = edge_length / 2
     volume = (5 / 12) * (3 + np.sqrt(5)) * (edge_length ** 3)
     
