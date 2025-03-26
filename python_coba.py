@@ -26,7 +26,7 @@ def generate_icosahedron_vertices(edge_length):
 def plot_icosahedron(vertices, faces):
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
-    ax = rand(0,100)
+    
     ax.set_xlabel('X')
     ax.set_ylabel('Y')
     ax.set_zlabel('Z')
@@ -39,7 +39,7 @@ def plot_icosahedron(vertices, faces):
     plt.show()
 
 if __name__ == "__main__":
-    edge_length = float(input("Njaluk panjang sisi piro bos ? ")) =float(input("Njaluk panjang sisi piro bos ? "))
+    edge_length = float(input("Njaluk panjang sisi piro bos ? ")) 
     vertices, faces = generate_icosahedron_vertices(edge_length)
     plot_icosahedron(vertices, faces)
 
@@ -52,4 +52,4 @@ def display_icosahedron_info():
     print("- Simetri yang tinggi dan merupakan bagian dari bangun Platonik")
     print("Icosahedron sering digunakan dalam geometri, grafik komputer, dan model struktur molekul.")
 
-    
+display_icosahedron_info()   
