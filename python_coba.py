@@ -64,7 +64,18 @@ def display_icosahedron_info():
 
 if __name__ == "__main__":
     display_icosahedron_info()
-    edge_length = float(input("Masukkan Panjang Rusuk = a : ")) 
-    volume = calculate_icosahedron_volume(edge_length)
-    vertices, faces = generate_icosahedron_vertices(edge_length)
-    plot_icosahedron(vertices, faces)
+    try:
+        edge_length = float(input("\nMasukkan Panjang Rusuk = a: "))
+        if edge_length <= 0:
+            raise ValueError("Panjang rusuk harus bilangan positif.")
+
+        volume = calculate_icosahedron_volume(edge_length)
+        vertices, faces = generate_icosahedron_vertices(edge_length)
+
+        print("\nPerhitungan Icosahedron:")
+        print(f"Volume Icosahedron: {volume:.2f} satuan kubik")
+
+        plot_icosahedron(vertices, faces)
+
+    except ValueError as e:
+        print(f"Input tidak valid: {e}")
