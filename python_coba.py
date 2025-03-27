@@ -42,10 +42,10 @@ def calculate_icosahedron_volume(edge_length):
 def plot_icosahedron(vertices, faces):
     fig = plt.figure()
     ax = fig.add_subplot(111, projection='3d')
-    
-    ax.set_xlabel('X')
-    ax.set_ylabel('Y')
-    ax.set_zlabel('Z')
+    #Menambahkan satuan pada label sumbu
+    ax.set_xlabel('X (cm)')
+    ax.set_ylabel('Y (cm)')
+    ax.set_zlabel('Z (cm)')
     
     colors = ["#" + ''.join(random.choices('0123456789ABCDEF', k=6)) for _ in faces]
     poly3d = [[vertices[vertex] for vertex in face] for face in faces]
