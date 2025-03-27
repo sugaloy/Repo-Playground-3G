@@ -50,7 +50,7 @@ def plot_icosahedron(vertices, faces):
     ax.add_collection3d(Poly3DCollection(poly3d, alpha=0.5, edgecolor='k'))
     
     ax.scatter(vertices[:, 0], vertices[:, 1], vertices[:, 2], color='red')
-    
+    plt.title("Visualisasi Icosahedron")
     plt.show()
 
 #Menampilkan informasi tentang Icosahedron sebelum input panjang rusuk = a
