@@ -55,6 +55,8 @@ def plot_icosahedron(vertices, faces):
     
     ax.scatter(vertices[:, 0], vertices[:, 1], vertices[:, 2], color='red')
     plt.title("Visualisasi Icosahedron")
+    plt.savefig("icosahedron.png")
+    print("Gambar icosahedron telah disimpan sebagai 'icosahedron.png'")
     plt.show()
 
 #Menampilkan informasi tentang Icosahedron sebelum input panjang rusuk = a
