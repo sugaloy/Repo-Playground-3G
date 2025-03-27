@@ -3,6 +3,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
+import random
 
 def generate_icosahedron_vertices(edge_length):
     phi = (1 + np.sqrt(5)) / 2  # Golden ratio
@@ -21,7 +22,7 @@ def generate_icosahedron_vertices(edge_length):
         [3, 9, 4], [3, 4, 2], [3, 2, 6], [3, 6, 8], [3, 8, 9],
         [4, 9, 5], [2, 4, 11], [6, 2, 10], [8, 6, 7], [9, 8, 1]
     ]
-    
+
     return vertices, faces
 
 def calculate_icosahedron_volume(edge_length):
@@ -46,8 +47,10 @@ def plot_icosahedron(vertices, faces):
     ax.set_ylabel('Y')
     ax.set_zlabel('Z')
     
+    colors = ["#" + ''.join(random.choices('0123456789ABCDEF', k=6)) for _ in faces]
     poly3d = [[vertices[vertex] for vertex in face] for face in faces]
-    ax.add_collection3d(Poly3DCollection(poly3d, alpha=0.5, edgecolor='k'))
+    for i, face in enumerate(poly3d):
+        ax.add_collection3d(Poly3DCollection([face], facecolors=colors[i], alpha=0.5, edgecolor='k'))
     
     ax.scatter(vertices[:, 0], vertices[:, 1], vertices[:, 2], color='red')
     plt.title("Visualisasi Icosahedron")
