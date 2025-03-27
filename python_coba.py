@@ -1,5 +1,6 @@
 #TUGAS MENYUSUN BERSAMA CODE MENGHITUNG VOLUME ISOCAHEDRON DENGAN INPUT VARIABEL a
 #a = RUSUK SEBUAH BANGUN RUANG ISOCAHEDRON
+#Bangun Ruang ISOCAHEDRON adalah sebuah polihedron yang memiliki 20 sisi.
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
